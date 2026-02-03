@@ -1,68 +1,64 @@
-﻿Comandos para Ubicación y Contenido
+# Comandos para Ubicación y Contenido
 
-pwd --> Mostrar dónde estoy situado.
+**pwd** &rarr; Mostrar dónde estoy situado.
 
---> Para saber donde estoy, y por lo tanto,
+    Para saber donde estoy, y por lo tanto, para no perderme dentro del terminal de Linux...
 
-para no perderme dentro del terminal de Linux...
+**ls**  &rarr;  Mostar archivos y carpetas.
 
-ls --> Mostar archivos y carpetas.
+    Es importante saber, que hay que mirar antes de hacer algo...
 
--->Es importante saber, que hay que mirar antes de
+### Comandos para Moverse entre carpetas
 
-hacer algo...
+**cd** &rarr; ChangeDirectory. Moverse entre carpetas
 
-Comandos para Moverse entre carpetas
+    cd Documents      Estoy dentro de una carpeta
 
-cd --> ChangeDirectory. Moverse entre carpetas.
+    cd ..             Volver hacia atrás
 
---> cd Documents  --> Estoy dentro de una carpeta
+    cd ~              Voy a mi carpeta personal.
 
---> cd .. --> Volver hacia atrás
+**Importante: Si no etoy bien situado, todo puede fallar...**
 
---> cd ~ --> Voy a mi carpeta personal.
+### Comandos para archivos
 
-Importante: Si no etoy bien situado, todo puede fallar...
+**touch** &rarr; Sirve para crear un archivo vacío.
 
-Comandos para archivos
+**nano** &rarr; Editar archivo.
 
-touch --> Sirve para crear un archivo vacío.
+      Ctrl + O --> Guardar Documento
 
-nano --> Editar archivo.
+      Ctrl + X --> Salir del Documento
 
---> Ctrl + O --> Guardar Documento
+### Comando para Ver Contenido
 
---> Ctrl + X --> Salir del Documento
+**cat** &rarr; Muestra lo que hay dentro de un archivo.
 
-Comando para Ver Contenido
+        Si uso solo cat, se queda esperando...
 
-cat --> Muestra lo que hay dentro de un archivo.
+        Para salir de este estado,    Ctrl + C
 
---> Si uso solo cat, se queda esperando...
+### Detener Comandos (Finalizar "Procesos")
 
---> Para salir de este estado, Ctrl + C
+**Ctrl + C** &rarr; Detener un proceso.
 
-Detener Comandos (Finalizar "Procesos")
+        NO COPIA UN COMANDO PEGADO COMO EN WINDOWS...
 
-Ctrl + C --> Detener un proceso.
+**Ctrl + Shift (Flecha Izq Arriva) + C** &rarr; Copiar archivos, carpetas, etc.
 
---> NO COPIA UN COMANDO PEGADO COMO EN WINDOWS...
+**Importante: También es considerado como un botón de emergencia...**
 
-Ctrl + Shift (Flecha Izq Arriva) + C --> Copiar
+### Borrar
 
-Importante: Es un botón de emergencia...
+***rm*** &rarr; borrar archivos
 
-Borrar
+***rmdir*** &rarr; borrar carpetas vacías
 
-rm --> borrar archivos
+***rm -r*** &rarr; borrar carpetas con TODO dentro.
 
-rmdir --> borrar carpetas vacías
+    Usar sólo si estoy segurx de lo que hago...
 
-rm -r --> borrar carpetas con TODO dentro.
-
---> Usar sólo si estoy segurx de lo que hago...
-
-Ideas Clave (IMPORTANTES)
+#### Ideas Clave (IMPORTANTES)
 
 - Linux distingue mayúsculas
 - Un archivo no se ejecuta escribiedo su nombre...
@@ -70,149 +66,132 @@ Ideas Clave (IMPORTANTES)
 - Linux NO falla, explica lo que ocurre para que podáis solventarlo.
 - Mejor lento y entendiendo las cosas, que rápido y mal
 
-Copiar y Mover archivos
+### Copiar y Mover archivos
 
-cp --> Copiar archivos (el Original NO se pierde)
+**cp** &rarr; Copiar archivos (el Original NO se pierde)
 
-Regla Mental: cp = "Hacer una copia y dejar el original donde está"
+*Regla Mental*: ***cp = "Hacer una copia y dejar el original donde está"***
 
 Ejemplos:
 
-cp prueba.txt copia.txt --> Crea una copia con otro nombre
+    cp prueba.txt copia.txt     --> Crea una copia con otro nombre
 
-cp prueba.txt .. --> copia el archivo a la carpeta de arriba.
+    cp prueba.txt ..            --> copia el archivo a la carpeta de arriba.
 
-Importante:
+***Importante:***
 
 - El segundo nombre puede ser cualquiera
 - Linux no exige "copia" en el nombre
 - Si el destino no existe, Linux crea un arhivo con este nombre.
 
-Si algo se se copia con nombre raro --> No es un error, Linux
+Si algo se se copia con nombre raro &rarr; No es un error, Linux obedece literalmente nuestras instrucciones.
 
-obedece literalmente nuestras instrucciones.
+***mv*** &rarr; Se utiliza para Mover o Renombrar archivos
 
-mv --> Se utiliza para Mover o Renombrar archivos
-
-Regla Mental: mv = "cambiar de lugar o cambiar nombre"
+*Regla Mental:* ***mv = "cambiar de lugar o cambiar nombre"***
 
 Ejemplos:
 
-mv archivo.txt carpeta/ --> mueve el archivo
+    mv archivo.txt carpeta/                     --> mueve el archivo
 
-mv mal\_escrito.txt bien\_escrito.txt --> Renombrar el archivo
+    mv mal\_escrito.txt bien\_escrito.txt       --> Renombrar el archivo
 
-mv archivo.txt Archivo\_Final.txt --> cambiar el nombre completo.
+    mv archivo.txt Archivo\_Final.txt           --> cambiar el nombre completo.
 
-Importante: mv NO COPIA, el archivo desaparece del lugar original.
+**Importante: mv NO COPIA, el archivo desaparece del lugar original.**
 
-Rutas, Subir y Bajar carpetas
+### Rutas, Subir y Bajar carpetas
 
-.. --> Representar "la carpeta anterior"
+**.. (dos puntos)** &rarr; Representar "la carpeta anterior"
 
-Regla Clave: NO es un comando, es una ruta.
+***Regla Clave: NO es un comando, es una ruta.***
 
 Correcto:
+  - cd ..
+  - cp archivo.txt ..
 
-- cd ..
-- cp archivo.txt ..
+Incorrecto:
 
-Incorrepto:
-
-- .. (Sólo no hace nada...)
+  - .. (Sólo no hace nada...)
 
 Entender Errores Comunes
 
-- "not a directory" --> Estoy intentando entar con cd a un archivo.
-- "No such file or directory"
+  - "not a directory" --> Estoy intentando entar con cd a un archivo.
+  - "No such file or directory"
+  - El nombre está mal escrito
+  - Falta una letra
+  - Estoy en otra carpeta
 
---> El nombre está mal escrito
+***Linux no adivina, ejecuta exactamente lo que escribo...***
 
---> Falta una letra
-
---> Estoy en otra carpeta
-
-Linux no adivina, ejecuta exactamente lo que escribo...
-
-Renombrar Archivos (corregir errores)
-
-Esto se hace con mv
+Renombrar Archivos (corregir errores) &rarr; Esto se hace con ***mv***
 
 Ejemplo:
+ 
+    mv impotate.txt  importante.txt
+    No existe "renombrar" el Linux, sólo mover con otro nombre.
 
-mv impotate.txt  importante.txt
-
-No existe "renombrar" el Linux, sólo mover con otro nombre.
-
-Nombres de Archivos Correctos
-
-Usar:
-
+  ***Nombres de Archivos Correctos***
+  Usar:
 - Letras en minúsculas
 - guión bajo \_
 - Nombres claros
 
 Evitar:
-
 - espacios
 - acentos
 - Usar la ñ
 - Símbolos o caracteres raros...
 
-Regla de oro:
+*Regla de oro: Si necesito comillas para escribir el nombre, el nombre está mal elegido.*
 
-Si necesito comillas para escribir el nombre, el nombre
+### Permisos (Lectura, Escritura y Ejecución)
 
-está mal elegido.
+***r = read (leer)***
 
-Permisos (Lectura, Escritura y Ejecución)
+***w = write (escribir / modificar)***
 
-r = read (leer)
+***x = execute (ejecutar / entrar (en carpetas))***
 
-w = write (escribir / modificar)
+**En carpetas:**
 
-x = execute (ejecutar / entrar (en carpetas))
+***x = poder entrar en ellas***
 
-En carpetas:
+***r = ver lo que hay dentro de ellas***
 
-x = poder entrar en ellas
-
-r = ver lo que hay dentro de ellas
-
-ls -l --> Mostrar permisos, dueños y tipo de archivos/carpetas
+***ls -l &rarr; Mostrar permisos, dueños y tipo de archivos/carpetas***
 
 Ejemplo:
 
-drwxrwxr-x
+  **drwxrwxr-x**
 
-- d --> directorio
-- rwx --> usuario
-- rwx --> grupo
-- r-x --> otros
+  ***- d &rarr; directorio***
+  ***- rwx &rarr; usuario***
+  ***- rwx &rarr; grupo***
+  ***- r-x &rarr; otros***
 
-El orden siempre es : usuario - grupo - otros
+**El orden siempre es : usuario - grupo - otros**
 
-chmod --> cambiar permisos
+***chmod*** &rarr; cambiar permisos
 
 Ejemplos:
+    
+    chmod g-w archivo.txt   --> quitar escritura al grupo
+    
+    chmod 600 archivo.txt   --> sólo el usuario puede leer y escribir
+    
+    chmod puede cambiar varios permisos en un solo comando.
 
-chmod g-w archivo.txt --> quitar escritura al grupo
+### Ideas clave que ya empezamos a dominar
 
-chmod 600 archivo.txt --> sólo el usuario puede leer y
+  - Linux es literal --> tal y como lo escribo, se ejecuta.
+  - Un error de letra crea otro archivo.
+  - cp copia, mv mueve o renombra
+  - rm borra archivos
+  - rmdir sólo carpetas vacías
+  - rm -r borra TODO
+  - cat sólo muestra Contenido
+  - Ctrl + C finaliza comandos / Procesos
+  - Importante: Pensar antes de borrar
+  - Entender > Memorizar
 
-escribir
-
-chmod puede cambiar varios permisos en un solo comando.
-
-Ideas clave que ya empezamos a dominar
-
-- Linux es literal --> tal y como lo escribo, se ejecuta.
-- Un error de letra crea otro archivo.
-- cp copia, mv mueve o renombra
-- rm borra archivos
-- rmdir sólo carpetas vacías
-- rm -r borra TODO
-- cat sólo muestra Contenido
-- Ctrl + C finaliza comandos / Procesos
-- Importante: Pensar antes de borrar
-- Entender > Memorizar
