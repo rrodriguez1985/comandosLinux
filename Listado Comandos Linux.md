@@ -195,3 +195,112 @@ Ejemplos:
   - Importante: Pensar antes de borrar
   - Entender > Memorizar
 
+##############################################################
+
+# Gestión de Paquetes (APT)
+
+La gestión de paquetes en Linux, es un tema clave no solo para el examen de la certificación, sino también en la gestión 
+de sistemas Linux en la vida real.
+
+Si sabemos cómo utilizarlo, y sobre todo, cómo aplicarlo y gestionarlo, seremos unos grandes Administradores/as de Software y 
+de Sistemas.
+
+
+**apt-get update** &rarr; Actualizar la lista de programas disponibles en nuestro sistema.
+
+	Que hace:
+ 		- Actualiza la lista de programas que Linux puede instalar o actualizar.
+ 		- NO se instala nada
+ 		- NO actualiza programas
+ 		- Sólo revisa que versión de X programas es el que existe
+
+	Por qué es importante: Si no hago esto antes, Linux puede instalar versiones antiguas disponibles. 
+
+	Clave para entender y usar este comando: Siempre va ANTES de instalar cualquier cosa, actualizar.
+	"Es como preguntar al sistema: ¿qué hay disponible hoy?"
+
+
+**apt-get upgrade** &rarr; Actualizar programas ya instalados.
+
+	Qué hace:  Actualiza todos los programas instalados a su versión más reciente.
+
+	Qué NO hace: NO instala programas nuevos , ni borra programas...
+
+	Cuándo usarlo: Después de apt-get update
+
+	"Es como decir: actualiza todo lo que ya tengo"
+
+
+**apt-get install** &rarr; Instalar un programa.
+
+	Qué hace: Instala el programa que yo le pida.
+
+	Ejemplo mental: Instalar algo que no tengo todavía.
+
+	install = traer algo nuevo al sistema.
+
+
+**apt-get remove** &rarr; Eliminar un programa (sin borrar configuración)
+
+	Que hace: Borrar el programa pero deja archivos de configuración.
+	
+	Para qué sirve: Si quiero quitar un programa pero tal vez volver a usarlo después, usaré apt-get remove...
+
+	Remove = desinstalar, pero no limpia del todo...
+
+**apt-get purge** &rarr; Elimina un programa COMPLETAMENTE
+
+	Qué hace: Borrar el programa, y también TODOS sus archivos de configuración.
+
+	Para qué sirve: Cuando quiero borrar algo para siempre.
+
+	Purge = eliminar sin dejar rastro.
+
+**apt-get autoremove** &rarr; Limpiar dependencias o paquetes que ya no se usan.
+
+	Qué hace: Elimina librerías y programas que se instalaron como apoyo y que ahora ya no sirven porque
+	se han quedado obsoletos o en desuso.
+
+	Cuándo usarlo: Después de upgrade o remove.
+
+	Resultado:
+		- Liberamos espacio del disco duro
+		- Obtenemos un sistema más limpio
+		- Nada se rompe...
+
+	Es la limpieza final del sistema!!!
+
+
+**sudo (MUY IMPORTANTE)**
+	
+	&rarr; Lo vamos a usar o utilizar para ejecutar acciones como administrador (es el rey)
+
+	Por qué es necesario: Instalar, borrar o actualizar programas que afectan a todo el sistema.
+
+	Qué significa: Linux me pide permisos porque estoy haciendo algo importante.
+
+	Nota Mental: "Sin sudo, Linux me protege de errores graves"
+
+Orden Correcto (Este flujo es ORO o Canelita en Rama...)
+
+1- sudo apt-get update
+
+2- sudo apt-get upgrade
+
+3- sudo apt-get autoremove
+
+Memorizarlo de las siguiente manera: Actualizo --> Subo --> Limpio
+
+
+Errores Comunes
+
+	- ap-get --> mal escrito
+	
+	- apt.get --> mal escrito
+
+	- Sin sudo --> permiso denegado
+
+"Linux no falla: Explica exactamente qué hicimos mal..."
+
+
+
