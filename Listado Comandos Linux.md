@@ -561,6 +561,8 @@ Significado real: CUALQUIERA PUEDE LEER, MODIFICAR Y EJECUTAR
 - 777 = Peligro!!!
 - chmod numérico = rápido y profesional
 
+![Linux](permisosLinux.jpg)
+
 **Busca Archivos: Comando find**
 
 - **find sirve para buscar archivos o carpetas sin entrar manualmente a cada directorio.**
@@ -648,3 +650,4 @@ _\- \*nota\* --> cualquier archivo que contenga "nota" en el nombre_
 **_\- find --> se utiliza para buscar archivos_**
 
 **_\- grep --> se utiliza para buscar texto_**
+
